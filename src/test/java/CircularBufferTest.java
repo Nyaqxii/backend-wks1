@@ -66,4 +66,21 @@ public class CircularBufferTest {
         assertEquals("A",cb.readData());
         cb.deleteData("A");
     }
+    @Test
+    public void create_A_Read_A_and_Delete_All_A_one_by_one() {
+        CircularBuffer cb = new CircularBuffer();
+        for (int i=0; i<10; i++){
+            cb.writeData("A" + i);
+        }
+        boolean result = cb.isFull();
+        assertTrue ("Buffer is Full", result);
+        cb.readData();
+        for (int i=0; i>=10;){
+        cb.deleteData("A");
+
+        boolean result2 = cb.isEmpty();
+        assertTrue ("Buffer is Empty", result2);
+        }
+
+    }
 }

@@ -4,8 +4,17 @@ public class CircularBuffer {
     private int ReadPointer;
     private int WritePointer;
 
+
     public CircularBuffer() {
         this.buffer = new String[10];
+    }
+
+    public void setSize() {
+        this.buffer = new String[15];
+    }
+
+    public boolean isReSize(int size){
+        return this.buffer.length == size;
     }
 
     public boolean isEmpty() {

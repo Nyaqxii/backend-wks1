@@ -33,4 +33,8 @@ public class CircularBuffer {
     public String readData() {
         return this.buffer[ReadPointer++];
     }
+
+    public void deleteData(String input) {
+        this.buffer[WritePointer--] = input;
+    }
 }

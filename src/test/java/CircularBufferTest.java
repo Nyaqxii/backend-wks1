@@ -58,4 +58,12 @@ public class CircularBufferTest {
         boolean result = cb.isReSize(size);
         assertTrue("size update: 15.",result);
     }
+
+    @Test
+    public void create_A_Read_A_and_Remove_A() {
+        CircularBuffer cb = new CircularBuffer();
+        cb.writeData("A");
+        assertEquals("A",cb.readData());
+        cb.deleteData("A");
+    }
 }

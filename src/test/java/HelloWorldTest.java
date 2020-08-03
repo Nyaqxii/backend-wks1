@@ -13,13 +13,13 @@ public class HelloWorldTest {
     public void sayHi_with_neeya_should_return_Hello_Neeya(){
         HelloWorld helloWorld = new HelloWorld();
         String result = helloWorld.sayHi("neeya");
-        assertEquals("Hello neeya", result); //ค่าที่เราคาดหวัง,สิ่งที่เราได้มา
+        assertEquals("Hello Neeya", result); //ค่าที่เราคาดหวัง,สิ่งที่เราได้มา
     }
 
     @Test
     public void sayHi_with_Hasaneeya_should_return_Hello_hasaneeya(){
         HelloWorld helloWorld = new HelloWorld();
-        String result = helloWorld.sayHi("Hasaneeya");
+        String result = helloWorld.sayHi("hasaneeya");
         assertEquals("Hello Hasaneeya", result); //ค่าที่เราคาดหวัง,สิ่งที่เราได้มา
     }
 }

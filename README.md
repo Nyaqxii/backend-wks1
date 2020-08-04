@@ -20,11 +20,11 @@
 * create_A_Read_A_and_Delete_All_A_one_by_one
 
 # TennisGame2
-* Code ซ้ำซ้อน => 
-** p1Point ,p2Point ทำงานและแสดงผลเหมือนกัน
-** public void p1Score(){} ทำงานเหมือนกัน
+* Code ซ้ำซ้อน
+  - p1Point ,p2Point ทำงานและแสดงผลเหมือนกัน
+  - public void p1Score(){} ทำงานเหมือนกัน
 * ตัวแปร 
-** private final String player1Name;
-** private final String player2Name;
+  - private final String player1Name;
+  - private final String player2Name;
 
   

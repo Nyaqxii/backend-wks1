@@ -11,15 +11,12 @@ public class TennisGame2
     }
 
     public String getResult(int point){
-        switch(point){
-            case 0:
-                return "Love";
-            case 1:
-                return "Fifteen";
-            case 2:
-                return "Thirty";
-        }
-        return "Forty";
+        return switch (point) {
+            case 0 -> "Love";
+            case 1 -> "Fifteen";
+            case 2 -> "Thirty";
+            default -> "Forty";
+        };
     }
 
     public String getScore(){

@@ -10,19 +10,17 @@ public class TennisGame2 {
         this.player2Name = player2Name;
     }
     public String getResult(int point){
-        switch(point){  //ref.tennis1
-            case 0:
-                return "Love";
-            case 1:
-                return "Fifteen";
-            case 2:
-                return "Thirty";
-        }
-        return "Forty";
+        //ref.tennis1
+        return switch (point) {
+            case 0 -> "Love";
+            case 1 -> "Fifteen";
+            case 2 -> "Thirty";
+            default -> "Forty";
+        };
     }
         public String getScore(){
-        String p1Res = "";
-        String p2Res = "";
+        String p1Res;
+        String p2Res;
         String score = "";
         //p1
         if (p1Point == p2Point && p1Point < 4)
@@ -83,10 +81,12 @@ public class TennisGame2 {
     }
 
         public void p1Score(){
+
         p1Point++;
     }
 
         public void p2Score(){
+
         p2Point++;
     }
 

@@ -9,19 +9,25 @@ public class TennisGame2 {
         this.player1Name = player1Name;
         this.player2Name = player2Name;
     }
-
+    public String getResult(int point){
+        switch(point){  //ref.tennis1
+            case 0:
+                return "Love";
+            case 1:
+                return "Fifteen";
+            case 2:
+                return "Thirty";
+        }
+        return "Forty";
+    }
         public String getScore(){
         String p1Res = "";
         String p2Res = "";
         String score = "";
+        //p1
         if (p1Point == p2Point && p1Point < 4)
         {
-            if (p1Point ==0)
-                score = "Love";
-            if (p1Point ==1)
-                score = "Fifteen";
-            if (p1Point ==2)
-                score = "Thirty";
+            score = getResult(p1Point);
             score += "-All";
         }
         if (p1Point == p2Point && p1Point >=3)
@@ -29,16 +35,12 @@ public class TennisGame2 {
 
         if (p1Point > 0 && p2Point ==0)
         {
-            if (p1Point ==1)
-                p1Res = "Fifteen";
-            if (p1Point ==2)
-                p1Res = "Thirty";
-            if (p1Point ==3)
-                p1Res = "Forty";
 
+            p1Res = getResult(p1Point);
             p2Res = "Love";
             score = p1Res + "-" + p2Res;
         }
+        //p2
         if (p2Point > 0 && p1Point ==0)
         {
             if (p2Point ==1)

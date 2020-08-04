@@ -4,6 +4,14 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class CircularBufferTest {
+    CircularBuffer cb = new CircularBuffer();
+
+    @Test
+    public void create_new_buffer_with_size(){
+       cb = new CircularBuffer(5);
+
+    }
+
     @Test
     public void create_new_buffer_should_empty(){
         CircularBuffer cb = new CircularBuffer();
@@ -13,7 +21,6 @@ public class CircularBufferTest {
 
     @Test
     public void create_new_buffer_with_default_size_should_10(){
-        CircularBuffer cb = new CircularBuffer();
         for (int i=0; i<10; i++){
             cb.writeData("A" + i);
         }
@@ -23,7 +30,6 @@ public class CircularBufferTest {
 
     @Test //FIFO
     public void write_A_B_to_buffer_should_read_A_B(){
-        CircularBuffer cb = new CircularBuffer();
         cb.writeData("A");
         cb.writeData("B");
         assertEquals("A",cb.readData());
@@ -32,7 +38,6 @@ public class CircularBufferTest {
 
     @Test //FIFO
     public void write_A_B_C_to_buffer_should_read_A_B_C(){
-        CircularBuffer cb = new CircularBuffer();
         cb.writeData("A");
         cb.writeData("B");
         cb.writeData("C");
@@ -53,7 +58,6 @@ public class CircularBufferTest {
     @Test
     public void reset_buffer_size_from_10_to_15() {
         int size = 15;
-        CircularBuffer cb = new CircularBuffer();
         cb.setSize();
         boolean result = cb.isReSize(size);
         assertTrue("size update: 15.",result);
@@ -61,21 +65,19 @@ public class CircularBufferTest {
 
     @Test
     public void create_A_Read_A_and_Remove_A() {
-        CircularBuffer cb = new CircularBuffer();
         cb.writeData("A");
         assertEquals("A",cb.readData());
         cb.deleteData("A");
     }
     @Test
     public void create_A_Read_A_and_Delete_All_A_one_by_one() {
-        CircularBuffer cb = new CircularBuffer();
         for (int i=0; i<10; i++){
             cb.writeData("A" + i);
         }
         boolean result = cb.isFull();
         assertTrue ("Buffer is Full", result);
         cb.readData();
-        for (int i=0; i>=10;){
+        for (int i=0; i>10;){
         cb.deleteData("A");
 
         boolean result2 = cb.isEmpty();

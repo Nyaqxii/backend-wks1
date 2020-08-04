@@ -11,7 +11,7 @@ public class TennisGame2 {
         this.player1Name = player1Name;
         this.player2Name = player2Name;
     }
-
+        //Get Score
         public String getScore(){
         String score = "";
         if (P1point == P2point && P1point < 4)

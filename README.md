@@ -13,9 +13,18 @@
 *  write pointer = 0
 
 
-# List Of Test Case1
+# List Of Test Case
 * test case by up1 : example
 * reset_buffer_size_from_10_to_15  (Ref. 'Jocker' : https://github.com/joker10130-dev/springboot-workshop/tree/workshop-02) 
 * create_A_Read_A_and_Remove_A
 * create_A_Read_A_and_Delete_All_A_one_by_one
+
+# TennisGame2
+* Code ซ้ำซ้อน
+  - p1Point ,p2Point ทำงานและแสดงผลเหมือนกัน
+  - public void p1Score(){} ทำงานเหมือนกัน
+* ตัวแปร 
+  - private final String player1Name;
+  - private final String player2Name;
+
   
